@@ -1,0 +1,40 @@
+{
+  "name": "property-env-converter",
+  "version": "1.0.0",
+  "description": "Convert Spring properties to DOTENV syntax or the other way around",
+  "main": "./out/extension.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "tsc -p . && vsce package"
+  },
+  "engines": {
+    "vscode": "^1.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ckocyigit/property-env-converter"
+  },  
+  "activationEvents": [
+    "onCommand"
+  ],  
+  "contributes": {
+    "commands": [
+        {
+            "command": "envToProp",
+            "title": "Environment Variable to Property",
+            "category": "PropEnv Converter"
+        },
+        {
+            "command": "propToEnv",
+            "title": "Property to Environment Variable",
+            "category": "PropEnv Converter"
+        }         
+    ]
+  },        
+  "author": "Can Kocyigit",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.4",
+    "vscode": "^1.1.37"
+  }
+}
